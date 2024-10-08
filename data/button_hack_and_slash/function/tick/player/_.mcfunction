@@ -11,9 +11,8 @@
   data modify storage button_hack_and_slash:context ItemID.Both set from storage button_hack_and_slash:context ItemID.Mainhand
 
 # アイテムの処理
-  # TestBow
-    execute if data storage button_hack_and_slash:context ItemID{Both:"TestBow"} run function button_hack_and_slash:weapons/test_bow/hold
-    execute unless data storage button_hack_and_slash:context ItemID{Both:"TestBow"} as @s[tag=ButtonHackAndSlash.HasInteraction] run function button_hack_and_slash:weapons/test_bow/not_hold
+  function button_hack_and_slash:tick/player/check_mainhand
+  function button_hack_and_slash:tick/player/check_offhand
 
 # 使用中かどうか
   execute if score @s[scores={ButtonHackAndSlash.Using=1..}] ButtonHackAndSlash.UseEnd matches 0 run function button_hack_and_slash:release_using

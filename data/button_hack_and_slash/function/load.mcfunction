@@ -9,3 +9,5 @@
   scoreboard objectives add ButtonHackAndSlash.UseEnd dummy
 
   scoreboard objectives add ButtonHackAndSlash.Temp dummy
+
+  function button_hack_and_slash:release_using

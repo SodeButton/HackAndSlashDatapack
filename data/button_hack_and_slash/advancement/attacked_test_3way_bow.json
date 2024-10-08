@@ -1,0 +1,58 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:any_of",
+						"terms": [
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"equipment": {
+										"mainhand": {
+											"predicates": {
+												"minecraft:custom_data": {
+													"button:ItemID": "Test3WayBow"
+												}
+											}
+										}
+									}
+								}
+							},
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"equipment": {
+										"offhand": {
+											"predicates": {
+												"minecraft:custom_data": {
+													"button:ItemID": "Test3WayBow"
+												}
+											}
+										}
+									}
+								}
+							}
+						]
+					}
+				],
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:interaction"
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "button_hack_and_slash:weapons/test_3way_bow/attack"
+	}
+}

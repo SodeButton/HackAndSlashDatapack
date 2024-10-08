@@ -1,0 +1,48 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:bow",
+					"functions": [
+						{
+							"function": "minecraft:set_lore",
+							"lore": [
+								"",
+								{
+									"text": "左クリックで発射できる弓",
+									"color": "white",
+									"italic": false
+								},
+								{
+									"text": "3方向に発射する",
+									"color": "white",
+									"italic": false
+								}
+							],
+							"mode": "replace_all"
+						},
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": { "button:ItemID": "Test3WayBow" },
+								"minecraft:unbreakable": {
+									"show_in_tooltip": false
+								}
+							}
+						},
+						{
+							"function": "minecraft:set_name",
+							"name": {
+								"text": "テスト弓",
+								"italic": false
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

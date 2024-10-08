@@ -1,6 +1,6 @@
 ## TestBowのアタック処理
 # advancementから実行される
-advancement revoke @s only button_hack_and_slash:attacked_test_bow
+advancement revoke @s only button_hack_and_slash:attacked_test_3way_bow
 
 # 発射するArrowのMotion値計算
 
@@ -58,6 +58,8 @@ advancement revoke @s only button_hack_and_slash:attacked_test_bow
 
 # 発射物召喚 
   execute at @s anchored eyes positioned ^ ^ ^ positioned ~ ~ ~ run function button_hack_and_slash:weapons/bow/shot_arrow
+  execute at @s anchored eyes positioned ^1 ^ ^ positioned ~ ~ ~ run function button_hack_and_slash:weapons/bow/shot_arrow
+  execute at @s anchored eyes positioned ^-1 ^ ^ positioned ~ ~ ~ run function button_hack_and_slash:weapons/bow/shot_arrow
 
 # 発射音
   execute at @s run playsound entity.arrow.shoot master
