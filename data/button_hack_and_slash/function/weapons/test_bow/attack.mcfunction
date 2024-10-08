@@ -56,15 +56,11 @@ advancement revoke @s only button_hack_and_slash:attacked_test_bow
     execute store result storage button_hack_and_slash:temp FirstPos[1] double 0.0001 run scoreboard players get $VectorY ButtonHackAndSlash.Temp
     execute store result storage button_hack_and_slash:temp FirstPos[2] double 0.0001 run scoreboard players get $VectorZ ButtonHackAndSlash.Temp
 
-# Arrow召喚 TODO：矢を飛ばすのではなくてmarkerかなにかでパーティクルで表現するのがいいかも
-  # execute at @s anchored eyes positioned ^ ^ ^ positioned ~ ~ ~ run summon armor_stand ~ ~ ~ {Tags:["ButtonHackAndSlash.TestBowArrow"], PortalCooldown:1, Invulnerable:true, Invisible:true, Silent:true, DisabledSlots:63, Small:true, attributes:[{id:"minecraft:generic.gravity",base:0.2}]}
+# 発射物召喚 
+  execute at @s anchored eyes positioned ^ ^ ^ positioned ~ ~ ~ run summon item ~ ~ ~ {Tags:["ButtonHackAndSlash.TestBowArrow"], PortalCooldown:1, Invulnerable:true, Item:{id:"glass",count:1}, PickupDelay:32767}
 
-  # execute at @s anchored eyes positioned ^ ^ ^1 run particle minecraft:crit ~ ~ ~ 0.01 0.01 0.01 0 3 force
-
-  # execute at @s anchored eyes positioned ^ ^ ^ positioned ~ ~ ~ run data modify entity @e[type=armor_stand, sort=nearest, tag=ButtonHackAndSlash.TestBowArrow,limit=1] Motion set from storage button_hack_and_slash:temp FirstPos
-
-  execute at @s anchored eyes positioned ^ ^ ^ run summon arrow ^ ^ ^ {Tags:["ButtonHackAndSlash.TestBowArrow"], crit:1b, life:1200}
-  execute at @s anchored eyes positioned ^ ^ ^ run data modify entity @e[type=arrow,tag=ButtonHackAndSlash.TestBowArrow,sort=nearest,limit=1] Motion set from storage button_hack_and_slash:temp FirstPos
+  execute at @s anchored eyes positioned ^ ^ ^ positioned ~ ~ ~ run data modify entity @e[type=item, sort=nearest, tag=ButtonHackAndSlash.TestBowArrow,limit=1] Motion set from storage button_hack_and_slash:temp FirstPos
+  execute at @s anchored eyes positioned ^ ^ ^ positioned ~ ~ ~ run data modify entity @e[type=item, sort=nearest, tag=ButtonHackAndSlash.TestBowArrow,limit=1] Thrower set from entity @s UUID
 
 # 発射音
   execute at @s run playsound entity.arrow.shoot master
