@@ -1,0 +1,2 @@
+execute if predicate button_gui:look_at_villager run function button_gui:player/teleport
+execute unless predicate button_gui:look_at_villager if score @s Button.GUI.ID matches 0.. run function button_gui:player/close

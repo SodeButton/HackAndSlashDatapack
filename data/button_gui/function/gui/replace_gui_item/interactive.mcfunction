@@ -1,0 +1,1 @@
+$item replace entity @s container.$(slot) with $(item_id)[max_stack_size=1, custom_model_data=$(model), item_name='{"text":"$(item_name)"}', custom_data={"Button.GUI.Item": {id:"GUI.$(name)", page:$(page)}}] 1
