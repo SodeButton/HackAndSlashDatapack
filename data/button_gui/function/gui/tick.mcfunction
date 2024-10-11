@@ -6,6 +6,6 @@
 
 # execute if score #bool Button.GUI.Temp matches 1 run function button_gui:gui/on_change
 
-function button_gui:gui/on_change
+execute at @s run function button_gui:gui/on_change
 
 # clear @a *[minecraft:custom_data~{"Button.GUI.Item":{}}]

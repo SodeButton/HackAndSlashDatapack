@@ -1,2 +1,2 @@
 $execute if items entity @s container.$(slot) *[!custom_data~{"Button.GUI.Item":{}}] run item replace entity @p player.cursor from entity @s container.$(slot)
-$item replace entity @s container.$(slot) with $(item_id)[max_stack_size=1, custom_model_data=$(model), item_name='{"text":"$(item_name)"}', custom_data={"Button.GUI.Item": {id:"GUI.$(name)", page:$(page)}}] 1
+$item replace entity @s container.$(slot) with $(item_id)[max_stack_size=1, custom_model_data=$(model), item_name='{"text":"$(item_name)"}', custom_data={"Button.GUI.Item": {id:"GUI.$(gui_id)", name:"$(name)", page:$(page)}}] 1

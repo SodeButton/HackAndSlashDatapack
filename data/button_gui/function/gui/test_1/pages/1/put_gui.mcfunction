@@ -1,4 +1,4 @@
-function button_gui:gui/replace_gui_item/gui_texture {name: "Test1", page: 1, slot: 0}
+function button_gui:gui/replace_gui_item/gui_texture {name: "Test1", page: 1, slot: 0, model: 102}
 function button_gui:gui/replace_gui_item/placeholder {name: "Test1", page: 1, slot: 1}
 function button_gui:gui/replace_gui_item/placeholder {name: "Test1", page: 1, slot: 2}
 function button_gui:gui/replace_gui_item/placeholder {name: "Test1", page: 1, slot: 3}

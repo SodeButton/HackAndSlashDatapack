@@ -4,3 +4,4 @@ execute as @e[type=chest_minecart,tag=Button.GUI] if score @s Button.GUI.ID = #s
 
 execute as @e[tag=Button.GUI] if score @s Button.GUI.ID = #search Button.GUI.ID run kill @s
 scoreboard players reset @s Button.GUI.ID
+$scoreboard players reset @s Button.GUI.ID.$(gui_name)
