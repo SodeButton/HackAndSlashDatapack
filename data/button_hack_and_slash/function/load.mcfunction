@@ -10,4 +10,6 @@
 
   scoreboard objectives add ButtonHackAndSlash.Temp dummy
 
+  scoreboard objectives add ButtonHackAndSlash.MaxHP dummy
+
   function button_hack_and_slash:release_using

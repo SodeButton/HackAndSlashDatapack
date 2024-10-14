@@ -44,3 +44,6 @@ execute if data storage button_gui:gui {isClicked:true} run function button_gui:
 execute if data storage button_gui:gui {isClicked:true} run playsound entity.villager.trade master @p
 execute if data storage button_gui:gui {isClicked:true} run playsound ui.button.click master @p
 execute if data storage button_gui:gui {isClicked:true} run give @p netherite_sword 1
+
+# リセット
+  data remove storage button_gui:gui isClicked

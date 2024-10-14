@@ -28,3 +28,6 @@ execute if score @s Button.GUI.ID = @p Button.GUI.ID store success storage butto
 execute if data storage button_gui:gui {isClicked:true} run function button_gui:gui/cheat_menu/pages/gamemode/put_gui
 execute if data storage button_gui:gui {isClicked:true} run playsound ui.button.click master @p
 execute if data storage button_gui:gui {isClicked:true} run gamemode spectator @p
+
+# リセット
+  data remove storage button_gui:gui isClicked
